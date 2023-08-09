@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    jQuery UI
+  </title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="css/mediaquary.css">
+
+  
+  <script text="text/javascript" src="js/main.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
+  
+
+  <style>
+    .row {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <div class="row">
+    <div class="col-4 col-s-12">
+      <a class="navbar-brand" href="index.html">
+      <img src="images/home-properties-logo.png" width="350">
+    </a>
+    </div>
+ 
+    <div class="col-8 col-s-12">
+      <h1 style="font-family: fantasy;margin-top: 40px;"> FIND YOUR DREAM PROPERTY WITHIN FINGERTIPS</h1>
+    </div>
+  </div>
+
+
+  <div>
+
+    <div class="row" style="background-color: rgb(221, 215, 215);border-radius: 5px;margin: 30px;">
+
+      <div class="col-12 col-s-12">
+        <div class="row" style="padding-bottom: 20px;">
+
+          <div class="col-1 col-s-12">
+            <label for="propertyType">Property Type :</label>
+          </div>
+
+          <div class="col-3 col-s-12">
+            <select name="propertyType" id="propertyType">
+              <option>House</option>
+              <option>Flat</option>
+              <option>Any</option>
+            </select>
+          </div>
+
+          <div class="col-1 col-s-12">
+            <label for="price">Price Range:</label>
+          </div>
+
+          <div class="col-3 col-s-12">
+            <input type="text" id="amount" style="border:0; color:#3b3a39; font-weight:bold;">
+            <div id="slider-range" style="margin-top: 10px;width: 150px;"></div>
+          </div>
+
+          <div class="col-1 col-s-12">
+            <label for="noOfbedrooms">No.of Bedrooms:</label>
+          </div>
+
+
+          <div class="col-3 col-s-12">
+            <select name="noOfbedrooms" id="noOfbedrooms">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1 col-s-12">
+            <label for="date"> Added Date :</label>
+          </div>
+          <div class="col-3 col-s-12">
+            <input type="text" id="datepicker">
+          </div>
+
+
+          <div class="col-1 col-s-12">
+            <label for="postCode"> Postcode Area :</label>
+          </div>
+          <div class="col-3 col-s-12">
+            <input id="postCode">
+          </div>
+
+          <div class="col-4 col-s-12">
+            <input type="submit" name="Search" onclick="searchData()">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="results-container" style="background-color: rgb(221, 215, 215);border-radius: 5px;margin: 30px;">
+  </div>
+
+ 
+
+
+  <div class="footer-page">
+    <footer>
+      <div class="icon">
+        <a href="#"><i class="icon ion-social-instagram"></i></a>
+        <a href="#"><i class="icon ion-social-snapchat"></i></a>
+        <a href="#"><i class="icon ion-social-twitter"></i></a>
+        <a href="#"><i class="icon ion-social-facebook"></i></a>
+      </div>
+      <p class="footer-text"> All rights reserved by Properties.lk © 2023</p>
+
+    </footer>
+  </div>
+
+
+
+  <script>
+
+    // property type
+    $(function () {
+      $("#propertyType").selectmenu({
+        width: '190px',
+        select: function (event, ui) {
+        }
+      });
+
+      // price range
+      $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 1000000,
+        values: [0, 500000],
+        slide: function (event, ui) {
+          $("#amount").val("$" + ui.values[0] + " - " + ui.values[1]);
+        }
+      });
+      $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+        " - " + $("#slider-range").slider("values", 1));
+
+      // no of Beds
+      $("#noOfbedrooms").selectmenu({
+        width: '100px',
+        select: function (event, ui) {
+
+        }
+      });
+      // date
+      $("#datepicker").datepicker();
+
+      // postcode area
+      var availablePostcode = [
+        "negombo",
+        "colombo",
+        "katana",
+      ];
+      $("#postCode").autocomplete({
+        source: availablePostcode
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>

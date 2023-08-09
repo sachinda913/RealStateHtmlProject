@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../css/properties.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="../css/mediaquary.css">
+  <link rel="stylesheet" href="../css/footer.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+
+
+  <div class="row">
+    <div class="col-4 col-s-12">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/home-properties-logo.png" width="350" height="100px">
+      </a>
+    </div>
+
+    <div class="col-8 col-s-12">
+      <h1 style="font-family: fantasy;margin-top: 40px;"> FIND YOUR DREAM PROPERTY WITHIN FINGERTIPS</h1>
+    </div>
+  </div>
+
+
+
+
+  <div class="row" style="padding: 20px 50px 20px 50px; background-color: rgb(235, 229, 225); border: 1px solid black;">
+    <div class="col-5 col-s-12">
+
+      <p style="font-family:fantasy; font-size: 30px;padding-bottom: 20px;">High Floor</p>
+      <p style="padding-bottom: 10px;"><span style="font-weight: bold;"> Type </span> : Flat</p>
+      <p style="padding-bottom: 10px;"> <span style="font-weight: bold;"> Price </span>: 199999</p>
+      <p style="padding-bottom: 10px;"> <span style="font-weight: bold;">Location </span>: Samurdi M.W Thimbirigaskatuwa
+      </p>
+      <p style="padding-bottom: 40px;">Beautiful flat with 2 bedrooms and attached bathrooms. Beautiful
+        view and cool weather.</p>
+
+      <button id="addButton" class=" button">Add to favourites</button>
+      <button id="removeButton" class=" button">Remove this from favourites</button>
+      <button id="removeAllButton" class=" button">Clear favourites</button>
+    </div>
+
+    <div class="col-5 col-s-12">
+
+      <a target="_blank" href="../images/prop4pic1small.jpg">
+        <img src="../images/prop4pic1small.jpg" alt="house"
+          style="border: 2px solid rgb(9, 9, 9);width: 100%;height: auto;">
+      </a>
+    </div>
+
+    <div class="col-2 col-s-12">
+      <div id="draggable" class="ui-widget-content">
+        <p>Drag to favourite list </p>
+      </div>
+
+      <div id="droppable" class="ui-widget-header">
+        <p style="text-align: center;">Favourite list</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row" style="background-color: rgb(235, 229, 225); padding: 20px 20px 20px 20px; border: 1px solid black;">
+
+    <div class="col-2 col-s-12" id="imagess">
+      <a target="_blank" href="../images/flat7.jpg">
+        <img src="../images/flat7.jpg" alt="house" class="image" width="200" height="115"
+          style="border: 2px solid rgb(9, 9, 9);">
+      </a>
+    </div>
+
+    <div class="col-2 col-s-12" id="imagess">
+      <a target="_blank" href="../images/flat8.jpg">
+        <img src="../images/flat8.jpg" alt="house" class="image" width="200" height="115"
+          style="border: 2px solid rgb(9, 9, 9);">
+      </a>
+    </div>
+
+
+    <div class="col-2 col-s-12" id="imagess">
+      <a target="_blank" href="../images/flat9.jpg">
+        <img src="../images/flat9.jpg" alt="house" class="image" width="200" height="115"
+          style="border: 2px solid rgb(9, 9, 9);">
+      </a>
+    </div>
+
+    <div class="col-2 col-s-12" id="imagess">
+      <a target="_blank" href="../images/flat10.jpg">
+        <img src="../images/flat10.jpg" alt="house" class="image" width="200" height="115"
+          style="border: 2px solid rgb(9, 9, 9);">
+      </a>
+    </div>
+
+    <div class="col-2 col-s-12" id="imagess">
+      <a target="_blank" href="../images/flat11.jpg">
+        <img src="../images/flat11.jpg" alt="house" class="image" width="200" height="115"
+          style="border: 2px solid rgb(9, 9, 9);">
+      </a>
+    </div>
+
+    <div class="col-2 col-s-12" id="imagess">
+      <a target="_blank" href="../images/flat12.jpg">
+        <img src="../images/flat12.jpg" alt="house" class="image" width="200" height="115"
+          style="border: 2px solid rgb(9, 9, 9);">
+      </a>
+    </div>
+
+  </div>
+
+
+  <div class="row" style="background-color: rgb(235, 229, 225); padding: 10px 50px 20px 50px">
+    <div class="col-12 col-s-3" id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Discription</a></li>
+        <li><a href="#tabs-2">Floor paln</a></li>
+        <li><a href="#tabs-3">Google map</a></li>
+      </ul>
+      <div class="col- col-s-12">
+        <div id="tabs-1">
+          <p style="font-family: 'Times New Roman', Times, serif;"> Presented in excellent decorative order throughout
+            is this two double bedroom,
+            two bathroom, garden flat. The modern fitted kitchen is open plan to the living
+            room which boasts solid wooden floors and includes integrated appliances including
+            a dishwasher & a washing machine. This large open plan benefits from bi folding
+            doors onto a secluded private courtyard garden. Both bedrooms are double sized,
+            and the family bathroom boasts a matching three piece suite a shower attachment
+            over the bath. There is also a separate wet room. There are walnut doors throughout
+            and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.
+            This apartment being only five years old, is still under a 10 year building guarantee...</p>
+        </div>
+      </div>
+
+      <div class="col- col-s-12">
+        <div id="tabs-2">
+          <img src="..//images/floorplan4.jpg" alt="floor plan" style="width: 100%;">
+        </div>
+      </div>
+
+      <div class="col- col-s-12">
+        <div id="tabs-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1979.0831899091054!2d79.86928441684107!3d7.221855099920716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2eedeb60bc12d%3A0x3c53361cbfa07d89!2sSamurdhi%20Mawatha%2C%20Negombo!5e0!3m2!1sen!2slk!4v1673563115299!5m2!1sen!2slk"
+             style="width: 100% ; height: auto;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</body>
+
+
+
+<div class="footer-page">
+  <footer>
+    <div class="icon">
+      <a href="#"><i class="icon ion-social-instagram"></i></a>
+      <a href="#"><i class="icon ion-social-snapchat"></i></a>
+      <a href="#"><i class="icon ion-social-twitter"></i></a>
+      <a href="#"><i class="icon ion-social-facebook"></i></a>
+    </div>
+    <p class="footer-text"> All rights reserved by Properties.lk © 2023</p>
+
+  </footer>
+</div>
+
+<div id="listMessages">
+<div id="addDialog" title="Success">
+  <p>Added to favourite list</p>
+</div>
+
+<div id="removeDialog" title="Success">
+  <p>Removed from favourite list</p>
+</div>
+
+<div id="errorDialog" title="Error">
+  <p>Property already found from favourite list</p>
+</div>
+
+<div id="removeAllDialog" title="Success">
+  <p>Cleared the favourite list</p>
+</div>
+
+<div id="noDataDialog" title="Error">
+  <p>No data found</p>
+</div>
+</div>
+
+<script>
+
+  $("#listMessages").hide();
+
+  var favouriteList = [];
+  let id = 4;
+
+  function checkRecordExits(id) {
+    let found = false;
+    for (let i = 0; i < favouriteList.length; i++) {
+      if (id == favouriteList[i]) {
+        found = true;
+        break;
+      }
+    }
+    return found;
+  }
+
+  $(function () {
+    $("#addButton").on("click", function (event) {
+      if (checkRecordExits(id) == false) {
+        favouriteList.push(id);
+        $("#addDialog").dialog();
+      } else {
+        $("#errorDialog").dialog();
+      }
+    });
+  });
+
+  $(function () {
+    $("#removeButton").on("click", function (event) {
+      if (favouriteList.length == 0) {
+        $("#noDataDialog").dialog();
+      } else {
+        $("#removeDialog").dialog();
+        favouriteList = [];
+      }
+    });
+  });
+
+  $(function () {
+    $("#removeAllButton").on("click", function (event) {
+
+      if (favouriteList.length == 0) {
+        $("#noDataDialog").dialog();
+      } else {
+        $("#removeAllDialog").dialog();
+        favouriteList = [];
+      }
+    });
+  });
+
+  $(function () {
+    $("#tabs").tabs();
+  });
+
+
+  $('#droppable').droppable(
+    {
+      accept: '#draggable',
+      drop: function (event, ui) {
+        ui.helper.data('dropped', true);
+      }
+    });
+
+  $('#draggable').draggable(
+    {
+      revert: false,
+      start: function (event, ui) {
+        ui.helper.data('dropped', false);
+      },
+      stop: function (event, ui) {
+        if (ui.helper.data('dropped')) {
+          $(this).addClass("ui-state-highlight").find("p").html("Drop from favourite list");
+          if (checkRecordExits(id) == false) {
+            favouriteList.push(id);
+            $("#addDialog").dialog();
+          } else {
+            $("#errorDialog").dialog();
+          }
+        } else {
+          $(this).addClass("ui-state-highlight").find("p").html("Drag to favourite list");
+          $("#removeDialog").dialog();
+          favouriteList = [];
+        }
+      }
+    });
+
+</script>
+
+
+
+</html>

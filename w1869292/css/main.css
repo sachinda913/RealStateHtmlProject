@@ -1,0 +1,48 @@
+
+.primary-button {
+    background-color: rgb(182, 53, 53);
+    height: 36px;
+    width: 150px;
+    border-radius: 5px;
+    color: aliceblue;
+    border: 2px solid black;
+
+}
+.logo-image img {
+    width: 150px;
+    height: 100px;
+    
+    
+    
+
+
+}
+
+
+
+
+#postCode{
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 25px;
+    height: 35px;
+
+
+}#datepicker{
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 25px;
+    height: 35px;
+}
+
+#slider-range{
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 15px; 
+    
+}
+
+.textcolor{
+    color: blue;
+}
+
